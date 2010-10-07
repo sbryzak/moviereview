@@ -1,0 +1,93 @@
+/* CSS Reset styles */
+
+html, body, div, span, applet, object, iframe,
+blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+caption {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+:focus {
+	outline: 0;
+}
+
+body {
+	line-height: 1;
+	color: black;
+  background: url(background.png) top left repeat-x;
+  margin: 0px;
+  font-family: Arial,Helvetica,sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+	content: "";
+}
+
+blockquote, q {
+	quotes: "" "";
+}
+
+/* Application styles */
+
+div#header {
+  padding: 4px;
+  height: 136px; 
+}
+
+div#title {
+  float: left;
+  height: 136px;
+  width: 207px;
+  background: url(title.png) top left no-repeat;  
+}
+
+div#container {
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100%;
+  width: 800px;
+  background-color: #ffffff;
+}
+
+div#content {
+  width: 100%;
+  padding: 8px 8px 24px 8px; 
+}
+
+/**
+*  Movie review summary
+*/
+
+div.reviewSummary {
+  border-top: 1px solid #000000; 
+}
+
+div.thumbnail {
+  float: left;
+  width: 100px; 
+}
+
+div.reviewContainer {
+  margin-left: 100px; 
+}
+
+div.movieTitle {
+  font-weight: bold; 
+}
