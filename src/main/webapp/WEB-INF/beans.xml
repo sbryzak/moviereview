@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://java.sun.com/xml/ns/javaee"
    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xmlns:p="urn:java:org.jboss.seam.persistence.transaction"
+   xmlns:s="urn:java:ee" 
    xsi:schemaLocation="
       http://java.sun.com/xml/ns/javaee 
       http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
-   <alternatives>
-      <class>org.jboss.seam.persistence.transaction.SeSynchronizations</class>
-   </alternatives>
+      
+   <p:SeSynchronizations>
+     <s:modifies/>
+   </p:SeSynchronizations>
+   
    <decorators/>
+   
    <interceptors>
       <class>org.jboss.seam.persistence.transaction.TransactionInterceptor</class>
    </interceptors>

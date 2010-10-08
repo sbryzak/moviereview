@@ -157,11 +157,11 @@
 			</exclusions>
 		</dependency>
 
-		<dependency>
+		<!--dependency>
 			<groupId>org.jboss.seam.servlet</groupId>
 			<artifactId>seam-servlet</artifactId>
 			<version>${seam.servlet.version}</version>
-		</dependency>
+		</dependency-->
 
 		<dependency>
 			<groupId>com.sun.facelets</groupId>
