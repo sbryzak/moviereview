@@ -14,15 +14,15 @@ public class Country implements Serializable
 {
    private static final long serialVersionUID = -4650150881899775164L;
    
-   @Id @GeneratedValue private Integer id;
+   @Id @GeneratedValue private Long id;
    private String name;
    
-   public Integer getId()
+   public Long getId()
    {
       return id;
    }
    
-   public void setId(Integer id)
+   public void setId(Long id)
    {
       this.id = id;
    }

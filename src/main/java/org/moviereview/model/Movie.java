@@ -15,18 +15,18 @@ public class Movie implements Serializable
 {
    private static final long serialVersionUID = -1428105132312729819L;
 
-   @Id @GeneratedValue private Integer id;
+   @Id @GeneratedValue private Long id;
    private String title;
    private int year;   
    private String synopsis;
    @ManyToOne @JoinColumn(name = "COUNTRY_ID") private Country country;
    
-   public Integer getId()
+   public Long getId()
    {
       return id;
    }
    
-   public void setId(Integer id)
+   public void setId(Long id)
    {
       this.id = id;
    }

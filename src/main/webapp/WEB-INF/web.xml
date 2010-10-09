@@ -16,6 +16,17 @@
       <url-pattern>*.jsf</url-pattern>
    </servlet-mapping>
    
+   <servlet>
+      <servlet-name>Thumbnail Servlet</servlet-name>
+      <servlet-class>org.moviereview.servlet.ThumbnailServlet</servlet-class>
+      <load-on-startup>1</load-on-startup>
+   </servlet>
+   
+   <servlet-mapping>
+      <servlet-name>Thumbnail Servlet</servlet-name>
+      <url-pattern>/thumbnail/*</url-pattern>
+   </servlet-mapping>
+   
    <!-- This is an optional parameter, but it makes troubleshooting errors much easier.  -->
    <!-- You may want to delete it before final deployment -->
    <context-param>

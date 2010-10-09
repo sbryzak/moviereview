@@ -16,16 +16,16 @@ public class MovieGenre implements Serializable
 {
    private static final long serialVersionUID = 8915942942297268859L;
    
-   @Id @GeneratedValue private Integer id;
+   @Id @GeneratedValue private Long id;
    @ManyToOne @JoinColumn(name = "GENRE_ID") Genre genre;
    @ManyToOne @JoinColumn(name = "MOVIE_ID") Movie movie;
    
-   public Integer getId()
+   public Long getId()
    {
       return id;
    }
    
-   public void setId(Integer id)
+   public void setId(Long id)
    {
       this.id = id;
    }

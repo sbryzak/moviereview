@@ -68,7 +68,7 @@ div#container {
 
 div#content {
   width: 100%;
-  padding: 8px 8px 24px 8px; 
+  padding: 8px 0px 24px 0px; 
 }
 
 /**
@@ -76,16 +76,19 @@ div#content {
 */
 
 div.reviewSummary {
-  border-top: 1px solid #000000; 
+  border-top: 1px solid #777777; 
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 8px;
 }
 
 div.thumbnail {
   float: left;
-  width: 100px; 
+  width: 180px; 
 }
 
 div.reviewContainer {
-  margin-left: 100px; 
+  margin-left: 190px; 
 }
 
 div.movieTitle {

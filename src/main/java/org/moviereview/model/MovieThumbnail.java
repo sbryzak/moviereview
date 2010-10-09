@@ -16,16 +16,17 @@ public class MovieThumbnail implements Serializable
 {
    private static final long serialVersionUID = 1674512388723776252L;
    
-   @Id @GeneratedValue private Integer id;
+   @Id @GeneratedValue private Long id;
    @OneToOne @JoinColumn(name = "MOVIE_ID") private Movie movie;
    private byte[] data;
+   private String contentType;
 
-   public Integer getId()
+   public Long getId()
    {
       return id;
    }
    
-   public void setId(Integer id)
+   public void setId(Long id)
    {
       this.id = id;
    }
@@ -48,5 +49,15 @@ public class MovieThumbnail implements Serializable
    public void setData(byte[] data)
    {
       this.data = data;
+   }
+   
+   public String getContentType()
+   {
+      return contentType;
+   }
+   
+   public void setContentType(String contentType)
+   {
+      this.contentType = contentType;
    }
 }

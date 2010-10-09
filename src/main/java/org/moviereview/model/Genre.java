@@ -12,15 +12,15 @@ import javax.persistence.Id;
 public class Genre implements Serializable
 {
    private static final long serialVersionUID = -225969864253613719L;
-   @Id private Integer id;
+   @Id private Long id;
    private String description;
    
-   public Integer getId()
+   public Long getId()
    {
       return id;
    }
    
-   public void setId(Integer id)
+   public void setId(Long id)
    {
       this.id = id;
    }

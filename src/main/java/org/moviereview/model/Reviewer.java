@@ -9,16 +9,16 @@ import javax.persistence.Id;
 public class Reviewer implements Serializable
 {
    private static final long serialVersionUID = 6856479085802179849L;
-   @Id private Integer id;
+   @Id private Long id;
    private String firstName;
    private String lastName;
    
-   public Integer getId()
+   public Long getId()
    {
       return id;
    }
    
-   public void setId(Integer id)
+   public void setId(Long id)
    {
       this.id = id;
    }

@@ -67,6 +67,13 @@
 			<classifier>jboss5</classifier>
 			<version>${weld.version}</version>
 		</dependency>
+		
+		<dependency>
+       <groupId>javax.servlet</groupId>
+       <artifactId>servlet-api</artifactId>       
+       <scope>provided</scope>
+       <version>2.5</version>
+    </dependency>
 
 		<!-- Needed on JBoss AS as EL is out of date -->
 		<dependency>

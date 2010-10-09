@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
 public class Review implements Serializable
 {
    private static final long serialVersionUID = 7586263853266540284L;
-   @Id private Integer id;
+   @Id private Long id;
    private Date reviewDate;
    @ManyToOne @JoinColumn(name = "MOVIE_ID") private Movie movie;
    @ManyToOne @JoinColumn(name = "REVIEWER_ID") private Reviewer reviewer;
@@ -20,12 +20,12 @@ public class Review implements Serializable
    private String review;
    private int rating;
    
-   public Integer getId()
+   public Long getId()
    {
       return id;
    }
    
-   public void setId(Integer id)
+   public void setId(Long id)
    {
       this.id = id;
    }

@@ -15,17 +15,17 @@ public class Cast implements Serializable
 {
    private static final long serialVersionUID = -4469898253297027853L;
    
-   @Id private Integer id;
+   @Id private Long id;
    @ManyToOne @JoinColumn(name = "ACTOR_ID") private Actor actor;
    @ManyToOne @JoinColumn(name = "MOVIE_ID") private Movie movie;
    private String role;
    
-   public Integer getId()
+   public Long getId()
    {
       return id;
    }
    
-   public void setId(Integer id)
+   public void setId(Long id)
    {
       this.id = id;
    }

@@ -11,7 +11,7 @@
      <ui:repeat value="#{reviewSearch.latestReviews}" var="review">
        <div class="reviewSummary">
          <div class="thumbnail">
-         
+           <img src="thumbnail/#{review.movie.id}"/>
          </div>
          <div class="reviewContainer">
            <div class="movieTitle">#{review.movie.title}</div>
