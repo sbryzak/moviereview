@@ -5,7 +5,43 @@
    xmlns:h="http://java.sun.com/jsf/html"
    template="/WEB-INF/templates/default.xhtml">
    <ui:define name="content">    
-   
+
+     <div class="heading">
+       All reviews by #{reviewerDetail.reviewer.firstName} #{reviewerDetail.reviewer.lastName}
+     </div>
+     
+     <ui:repeat value="#{reviewerDetail.reviews}" var="review">
+       <div class="reviewSummary">
+         <div class="thumbnail">
+           <a href="movie.jsf?id=#{review.movie.id}">
+             <img src="thumbnail/#{review.movie.id}"/>
+           </a>
+         </div>
+         <div class="reviewContainer">         
+           <a href="movie.jsf?id=#{review.movie.id}" class="movieTitle">#{review.movie.title}</a>
+           
+           <p>
+              <span>Reviewed on </span><h:outputText value="#{review.reviewDate}">
+                 <f:convertDateTime pattern="dd/MM/yyyy"/> 
+               </h:outputText>           
+           </p>
+           
+           <div class="summaryContent">#{review.summary}</div>
+           <div class="reviewAction">
+             <a href="review.jsf?id=#{review.id}">
+               Read full review
+             </a>
+           </div>
+           <div class="reviewAction">
+             <a href="movie.jsf?id=#{review.movie.id}">
+               See all reviews for this movie
+             </a>
+           </div>
+         </div>
+         <br class="clear"/>         
+       </div>       
+     </ui:repeat>
+     
      
    </ui:define>
 </ui:composition>

@@ -11,10 +11,12 @@
      <ui:repeat value="#{reviewSearch.latestReviews}" var="review">
        <div class="reviewSummary">
          <div class="thumbnail">
-           <img src="thumbnail/#{review.movie.id}"/>
+           <a href="movie.jsf?id=#{review.movie.id}">
+             <img src="thumbnail/#{review.movie.id}"/>
+           </a>
          </div>
          <div class="reviewContainer">         
-           <div class="movieTitle">#{review.movie.title}</div>
+           <a href="movie.jsf?id=#{review.movie.id}" class="movieTitle">#{review.movie.title}</a>
            <div class="movieReviewer"><span>By </span>
              <a href="reviewer.jsf?id=#{review.reviewer.id}">
                #{review.reviewer.firstName} #{review.reviewer.lastName}

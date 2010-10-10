@@ -8,13 +8,15 @@
    
      <div class="reviewContent">
        <div class="reviewThumbnail">
-         <img src="thumbnail/#{reviewDetail.review.movie.id}"/>
+         <a href="movie.jsf?id=#{reviewDetail.review.movie.id}">
+           <img src="thumbnail/#{reviewDetail.review.movie.id}"/>
+         </a>
        </div>
             
-       <span class="movieTitle">
+       <a href="movie.jsf?id=#{reviewDetail.review.movie.id}" class="movieTitle">
          #{reviewDetail.review.movie.title}
          <span> (#{reviewDetail.review.movie.year})</span>
-       </span>     
+       </a>
          
        <p class="movieReviewer">
          <span>Review by: </span>
@@ -22,6 +24,13 @@
            #{reviewDetail.review.reviewer.firstName} #{reviewDetail.review.reviewer.lastName}
          </a>
        </p>     
+       
+       <p>
+         <span>Review date: </span>
+         <h:outputText value="#{reviewDetail.review.reviewDate}">
+           <f:convertDateTime pattern="dd/MM/yyyy"/> 
+         </h:outputText>
+       </p>
          
        <span class="reviewText">
            <h:outputText escape="false" value="#{reviewDetail.review.review}"/>

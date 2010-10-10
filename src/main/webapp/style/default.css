@@ -124,6 +124,15 @@ div.reviewDate {
   font-size: 120%;
 }
 
+a.movieTitle, a.movieTitle:visited {
+  text-decoration: none;
+}
+
+a.movieTitle:hover {
+  color: #888888;
+  text-decoration: none;
+}
+
 br.clear {
   font-size: 1px;
   clear: both; 
