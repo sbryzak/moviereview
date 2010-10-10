@@ -71,15 +71,20 @@ div#content {
   padding: 8px 0px 24px 0px; 
 }
 
+div.heading {
+  margin: 8px 4px 8px 4px;  
+  font-weight: bold; 
+}
+
 /**
 *  Movie review summary
 */
 
 div.reviewSummary {
-  border-top: 1px solid #777777; 
-  margin-left: 4px;
-  margin-right: 4px;
+  margin: 2px 12px 10px 12px;
+  border-radius: 15px;
   padding: 8px;
+  background-color: #b9c7d5;
 }
 
 div.thumbnail {
@@ -91,6 +96,35 @@ div.reviewContainer {
   margin-left: 190px; 
 }
 
+div.movieReviewer {
+  margin-top: 12px;
+  margin-bottom: 12px;   
+}
+
+div.summaryContent {
+  margin-top: 8px;
+  font-style: italic; 
+  color: #444444;
+}
+
+div.reviewAction {
+  margin-top: 8px;
+  margin-bottom: 8px; 
+}
+
+div.reviewDate {
+  font-size: 80%;
+  float: right;
+  color: #555555; 
+}
+
 div.movieTitle {
+  color: #555555;
   font-weight: bold; 
+  font-size: 120%;
+}
+
+br.clear {
+  font-size: 1px;
+  clear: both; 
 }

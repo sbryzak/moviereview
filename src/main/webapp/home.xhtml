@@ -6,17 +6,40 @@
    template="/WEB-INF/templates/default.xhtml">
    <ui:define name="content">    
    
-     <h2>Latest Reviews</h2>
+     <div class="heading">Latest Reviews</div>
      
      <ui:repeat value="#{reviewSearch.latestReviews}" var="review">
        <div class="reviewSummary">
          <div class="thumbnail">
            <img src="thumbnail/#{review.movie.id}"/>
          </div>
-         <div class="reviewContainer">
+         <div class="reviewContainer">         
            <div class="movieTitle">#{review.movie.title}</div>
+           <div class="movieReviewer"><span>By </span>
+             <a href="reviewer.jsf?id=#{review.reviewer.id}">
+               #{review.reviewer.firstName} #{review.reviewer.lastName}
+             </a>
+             <div class="reviewDate">
+               <span>Review date: </span>
+               <h:outputText value="#{review.reviewDate}">
+                 <f:convertDateTime pattern="dd/MM/yyyy"/> 
+               </h:outputText>
+             </div>
+           </div>
+           <div class="summaryContent">#{review.summary}</div>
+           <div class="reviewAction">
+             <a href="review.jsf?id=#{review.id}">
+               Read full review
+             </a>
+           </div>
+           <div class="reviewAction">
+             <a href="movie.jsf?id=#{review.movie.id}">
+               See all reviews for this movie
+             </a>
+           </div>
          </div>
-       </div>
+         <br class="clear"/>         
+       </div>       
      </ui:repeat>
      
    </ui:define>
