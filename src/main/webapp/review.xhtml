@@ -6,6 +6,34 @@
    template="/WEB-INF/templates/default.xhtml">
    <ui:define name="content">    
    
-     
+     <div class="reviewContent">
+       <div class="reviewThumbnail">
+         <img src="thumbnail/#{reviewDetail.review.movie.id}"/>
+       </div>
+            
+       <span class="movieTitle">
+         #{reviewDetail.review.movie.title}
+         <span> (#{reviewDetail.review.movie.year})</span>
+       </span>     
+         
+       <p class="movieReviewer">
+         <span>Review by: </span>
+         <a href="reviewer.jsf?id=#{reviewDetail.review.reviewer.id}">
+           #{reviewDetail.review.reviewer.firstName} #{reviewDetail.review.reviewer.lastName}
+         </a>
+       </p>     
+         
+       <span class="reviewText">
+           <h:outputText escape="false" value="#{reviewDetail.review.review}"/>
+       </span>
+             
+       <p>
+         <a href="movie.jsf?id=#{reviewDetail.review.movie.id}">
+           See all reviews for this movie
+         </a>
+       </p>
+       
+     </div>
+          
    </ui:define>
 </ui:composition>

@@ -96,7 +96,7 @@ div.reviewContainer {
   margin-left: 190px; 
 }
 
-div.movieReviewer {
+.movieReviewer {
   margin-top: 12px;
   margin-bottom: 12px;   
 }
@@ -118,7 +118,7 @@ div.reviewDate {
   color: #555555; 
 }
 
-div.movieTitle {
+.movieTitle {
   color: #555555;
   font-weight: bold; 
   font-size: 120%;
@@ -128,3 +128,39 @@ br.clear {
   font-size: 1px;
   clear: both; 
 }
+
+/*
+* Movie details
+*/
+
+div.movieSummary {
+  margin: 2px 12px 10px 12px;
+  padding: 8px;
+}
+
+div.detailContainer {
+  margin-left: 190px;
+}
+
+div.synopsis {
+  margin-top: 8px;
+  color: #444444;
+}
+
+/*
+ * Review
+ */
+ 
+div.reviewThumbnail {
+  float: right;
+  margin: 8px;
+}
+
+.reviewText {
+  text-align: justify; 
+}
+
+.reviewContent {
+  padding: 8px;
+}
+  
