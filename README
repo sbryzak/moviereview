@@ -1,0 +1,8 @@
+Movie Review Example
+====================
+
+This example is intended to be deployed on EAP 5.  To build, simply run:
+
+mvn clean package -Pdeploy
+
+You must also make sure that the jboss.home environment variable is set to your JBossAS directory.
