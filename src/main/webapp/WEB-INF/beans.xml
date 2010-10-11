@@ -9,6 +9,10 @@
    
    <decorators/>
    
+   <p:SeSynchronizations>
+     <s:modifies/>
+   </p:SeSynchronizations>   
+   
    <interceptors>
       <class>org.jboss.seam.persistence.transaction.TransactionInterceptor</class>
    </interceptors>

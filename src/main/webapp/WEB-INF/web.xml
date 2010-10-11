@@ -38,6 +38,10 @@
       <param-name>javax.faces.DEFAULT_SUFFIX</param-name>
       <param-value>.xhtml</param-value>
    </context-param>
+   
+   <listener>
+      <listener-class>org.jboss.weld.extensions.resourceLoader.servlet.ResourceListener</listener-class>
+   </listener>
            
    <listener>
       <listener-class>org.jboss.weld.environment.servlet.Listener</listener-class>
