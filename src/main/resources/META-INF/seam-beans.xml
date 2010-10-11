@@ -6,10 +6,9 @@
    xsi:schemaLocation="
       http://java.sun.com/xml/ns/javaee 
       http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
-   
-   <decorators/>
-   
-   <interceptors>
-      <class>org.jboss.seam.persistence.transaction.TransactionInterceptor</class>
-   </interceptors>
+      
+   <p:SeSynchronizations>
+     <s:modifies/>
+   </p:SeSynchronizations>
+
 </beans>

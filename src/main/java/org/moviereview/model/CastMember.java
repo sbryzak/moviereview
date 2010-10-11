@@ -12,7 +12,7 @@ import javax.persistence.ManyToOne;
  * The cast for a movie.  Maps Actors to Movies in a many-to-many relationship
  */
 @Entity
-public class Cast implements Serializable
+public class CastMember implements Serializable
 {
    private static final long serialVersionUID = -4469898253297027853L;
    
