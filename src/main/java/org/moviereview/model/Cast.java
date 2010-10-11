@@ -3,6 +3,7 @@ package org.moviereview.model;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -15,7 +16,7 @@ public class Cast implements Serializable
 {
    private static final long serialVersionUID = -4469898253297027853L;
    
-   @Id private Long id;
+   @Id @GeneratedValue private Long id;
    @ManyToOne @JoinColumn(name = "ACTOR_ID") private Actor actor;
    @ManyToOne @JoinColumn(name = "MOVIE_ID") private Movie movie;
    private String role;

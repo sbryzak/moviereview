@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   template="/WEB-INF/templates/default.xhtml">
+      
+   <ui:define name="content">    
+  
+     <div class="heading">Write a review</div>
+
+     <div class="movieSummary">
+       <div class="thumbnail">
+         <img src="thumbnail/#{reviewAction.review.movie.id}"/>
+       </div>
+       <div class="detailContainer">
+         <span class="movieTitle">
+           #{movieDetail.movie.title}
+           <span> (#{reviewAction.review.movie.year})</span>
+         </span>
+         
+         <div style="padding:12px">
+           <span>Thankyou for choosing to write a review for </span><i>#{reviewAction.review.movie.title}</i>.
+           <span>To get started, please enter your first name and last name, then click the Next button.</span>
+         </div>     
+         
+         <h:form>
+           <div class="form">
+             <div>
+               First name
+               <h:inputText value="#{reviewAction.review.reviewer.firstName}"/>
+             </div>
+             
+             <div>
+               Last name
+               <h:inputText value="#{reviewAction.review.reviewer.lastName}"/>
+             </div>
+             
+             <h:commandButton action="next" value="Next"/>     
+           </div>
+    
+         </h:form>         
+         
+       </div>
+       <br class="clear"/>
+     </div>     
+          
+   </ui:define>
+</ui:composition>

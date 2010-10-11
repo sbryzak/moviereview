@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -14,7 +15,7 @@ public class Actor implements Serializable
 {
    private static final long serialVersionUID = -5577759231154572526L;
    
-   @Id private Long id;
+   @Id @GeneratedValue private Long id;
    private String firstName;
    private String lastName;
    private Date dob;

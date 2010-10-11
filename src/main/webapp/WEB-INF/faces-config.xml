@@ -10,15 +10,19 @@
       <view-handler>com.sun.facelets.FaceletViewHandler</view-handler>
    </application>
       
-   <!-- Navigation rules go here -->   
+   <navigation-rule>
+      <from-view-id>/movie.xhtml</from-view-id>
       
-   <!--navigation-rule>
-      <from-view-id>/home.xhtml</from-view-id>
-
+   </navigation-rule>      
+   
+   <navigation-rule>
+      <from-view-id>/createreview.xhtml</from-view-id>
+      
       <navigation-case>
-         <from-action></from-action>
-         <to-view-id></to-view-id>
-      </navigation-case>
-   </navigation-rule-->      
+         <from-outcome>next</from-outcome>
+         <to-view-id>/reviewcontent.xhtml</to-view-id>
+         <redirect/>
+      </navigation-case>    
+   </navigation-rule>
    
 </faces-config>

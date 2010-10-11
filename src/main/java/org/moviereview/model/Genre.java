@@ -3,6 +3,7 @@ package org.moviereview.model;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 /**
@@ -12,7 +13,7 @@ import javax.persistence.Id;
 public class Genre implements Serializable
 {
    private static final long serialVersionUID = -225969864253613719L;
-   @Id private Long id;
+   @Id @GeneratedValue private Long id;
    private String description;
    
    public Long getId()

@@ -73,7 +73,8 @@ div#content {
 
 div.heading {
   margin: 8px 4px 8px 4px;  
-  font-weight: bold; 
+  font-weight: bold;
+  padding-left: 8px; 
 }
 
 /**
@@ -173,3 +174,10 @@ div.reviewThumbnail {
   padding: 8px;
 }
   
+div.form {
+  margin: 2px 12px 10px 12px;
+  border-radius: 15px;
+  padding: 8px;
+  background-color: #b9c7d5;    
+}
+

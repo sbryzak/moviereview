@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+   xmlns:ui="http://java.sun.com/jsf/facelets"
+   xmlns:f="http://java.sun.com/jsf/core"
+   xmlns:h="http://java.sun.com/jsf/html"
+   template="/WEB-INF/templates/default.xhtml">
+   <ui:define name="content">    
+   
+     <div class="heading">Please enter your review</div>
+
+     <script type="text/javascript" src="ckeditor/ckeditor.js"></script>    
+     
+     <h:form id="reviewcontent">
+       <div class="form">
+
+         <div>         
+           <div>
+             <h:inputTextarea id="review" value="#{reviewAction.review.review}"/>
+           </div>            
+           
+            <script type="text/javascript">
+              CKEDITOR.config.removePlugins = "elementspath";
+              CKEDITOR.config.toolbarCanCollapse = false;
+              CKEDITOR.config.height = 320;
+              var editor = CKEDITOR.replace("reviewcontent:review",
+                {
+          			  toolbar : [ [ '-', 'Bold', 'Italic', 'Underline', '-', 'NumberedList', 'BulletedList', 
+          			    '-','Link', 'Unlink', '-', 'ImageButton'] ]
+          			});                					
+            </script>         
+         
+         </div>
+           
+         <h:commandButton action="#{reviewAction.saveReview}" value="Post review"/>
+       </div>
+
+     </h:form>
+     
+          
+   </ui:define>
+</ui:composition>

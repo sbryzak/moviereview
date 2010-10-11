@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -12,7 +13,7 @@ import javax.persistence.ManyToOne;
 public class Review implements Serializable
 {
    private static final long serialVersionUID = 7586263853266540284L;
-   @Id private Long id;
+   @Id @GeneratedValue private Long id;
    private Date reviewDate;
    @ManyToOne @JoinColumn(name = "MOVIE_ID") private Movie movie;
    @ManyToOne @JoinColumn(name = "REVIEWER_ID") private Reviewer reviewer;

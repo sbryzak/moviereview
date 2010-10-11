@@ -26,7 +26,7 @@ public @Model class MovieDetail
       reviews = entityManager.createQuery(
             "select r from Review r where r.movie.id = :id")
          .setParameter("id", id)
-         .getResultList();      
+         .getResultList();
    }
    
    public Movie getMovie()

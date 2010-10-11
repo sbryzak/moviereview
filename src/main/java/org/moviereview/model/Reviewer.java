@@ -3,13 +3,14 @@ package org.moviereview.model;
 import java.io.Serializable;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Reviewer implements Serializable
 {
    private static final long serialVersionUID = 6856479085802179849L;
-   @Id private Long id;
+   @Id @GeneratedValue private Long id;
    private String firstName;
    private String lastName;
    

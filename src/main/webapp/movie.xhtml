@@ -22,6 +22,12 @@
        </div>
        <br class="clear"/>
      </div>
+         
+     <div style="float:right;padding:8px">
+       <a href="createreview.jsf?id=#{movieDetail.movie.id}">Write a review</a>
+     </div>
+     
+     <br class="clear"/>
      
      <ui:repeat value="#{movieDetail.reviews}" var="review">
        <div class="reviewSummary">
