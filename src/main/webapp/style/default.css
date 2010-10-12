@@ -77,6 +77,26 @@ div.heading {
   padding-left: 8px; 
 }
 
+/*
+ * Form styles
+ */
+
+div.formRow {
+  padding-top: 2px;
+  padding-bottom: 2px; 
+}
+
+div.formRow label {
+  float: left;
+  width: 120px; 
+  padding: 2px 2px 2px 2px;
+}
+
+div.formRow input[type='text'] {
+  width: 220px;
+}
+
+
 /**
 *  Movie review summary
 */

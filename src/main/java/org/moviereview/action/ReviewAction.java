@@ -44,11 +44,12 @@ public @ConversationScoped @Named class ReviewAction implements Serializable
    }
    
    @Transactional 
-   public void saveReview()
+   public String saveReview()
    {
       entityManager.persist(review.getReviewer());      
       entityManager.persist(review);
       conversation.end();
+      return "reviewSaved";
    }
    
    public Review getReview()
