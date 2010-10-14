@@ -7,7 +7,9 @@
       http://java.sun.com/xml/ns/javaee 
       http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
    
-   <decorators/>
+   <decorators>
+      <class>org.moviereview.decorator.ReviewDecorator</class>
+   </decorators>
    
    <p:SeSynchronizations>
      <s:modifies/>

@@ -5,6 +5,7 @@ import java.util.Date;
 
 import javax.enterprise.context.Conversation;
 import javax.enterprise.context.ConversationScoped;
+import javax.enterprise.event.Event;
 import javax.enterprise.inject.Instance;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -12,11 +13,12 @@ import javax.persistence.EntityManager;
 
 import org.jboss.seam.persistence.transaction.Transactional;
 import org.jboss.seam.servlet.http.HttpParam;
+import org.moviereview.event.ReviewCreatedEvent;
 import org.moviereview.model.Movie;
 import org.moviereview.model.Review;
 import org.moviereview.model.Reviewer;
 
-public @ConversationScoped @Named class ReviewAction implements Serializable
+public @ConversationScoped @Named class ReviewAction implements IReviewAction, Serializable
 {
    private static final long serialVersionUID = -377817487440884371L;
    
@@ -24,6 +26,8 @@ public @ConversationScoped @Named class ReviewAction implements Serializable
    @Inject EntityManager entityManager;
    
    @Inject @HttpParam("id") Instance<String> movieId;
+   
+   @Inject Event<ReviewCreatedEvent> reviewCreatedEvent;
    
    private Review review;
    
@@ -49,6 +53,9 @@ public @ConversationScoped @Named class ReviewAction implements Serializable
       entityManager.persist(review.getReviewer());      
       entityManager.persist(review);
       conversation.end();
+      
+      reviewCreatedEvent.fire(new ReviewCreatedEvent(review));
+      
       return "reviewSaved";
    }
    

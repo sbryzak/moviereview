@@ -5,7 +5,7 @@
              version="1.0">      
    <persistence-unit name="moviereviewDatabase">      
       <provider>org.hibernate.ejb.HibernatePersistence</provider>
-      <jta-data-source>jdbc/__default</jta-data-source>
+      <jta-data-source>jdbc/__movieReviewDs</jta-data-source>
       <properties>
          <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
          <property name="hibernate.show_sql" value="false"/>         
